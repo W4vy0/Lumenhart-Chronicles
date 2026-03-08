@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=MedievalSharp&family=Nanum+Myeongjo:wght@400;700;800&display=swap');
+
+@theme {
+  --font-fantasy: "MedievalSharp", cursive;
+  --font-cinzel: "Cinzel", serif;
+  --font-myeongjo: "Nanum Myeongjo", serif;
+  
+  --color-parchment: #f3e5ab;
+  --color-parchment-dark: #d4c59a;
+  --color-gold: #ffd700;
+  --color-gold-dim: #c5a000;
+  --color-dark-bg: #1a1a1a;
+  --color-dark-overlay: rgba(0, 0, 0, 0.85);
+}
+
+body {
+  background-color: #121212;
+  color: #e0e0e0;
+  font-family: var(--font-myeongjo);
+  overflow: hidden; /* Prevent scrolling on body, handle in app */
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #1a1a1a; 
+}
+::-webkit-scrollbar-thumb {
+  background: #4a4a4a; 
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #6a6a6a; 
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  animation: marquee 30s linear infinite;
+}
